@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">P2Q5</string>
+    <string name="name1">Teoh Wan Ching</string>
+    <string name="website1">https://www.youtube.com/</string>
+    <string name="phone1">tel:0164558863></string>
+    <string name="name2">Teoh Wan Fang</string>
+    <string name="website2">https://www.youtube.com/</string>
+    <string name="phone2">tel:0164444444></string>
+    <string name="name3">Teoh Wan Theng></string>
+    <string name="website3">https://www.youtube.com/</string>
+    <string name="phone3">tel:0168888888></string>
+    <string name="name4">Adrian Leong</string>
+    <string name="website4">https://www.youtube.com/</string>
+    <string name="phone4">tel:0164559982></string>
+    <string name="name5">Jason Tan</string>
+    <string name="website5">https://www.youtube.com/</string>
+    <string name="phone5">tel:0167564552></string>
+</resources>
