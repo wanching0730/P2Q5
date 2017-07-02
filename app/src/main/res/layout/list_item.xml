@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="@color/colorPurple"
         android:layout_margin="8dp"/>
 
     <TextView
@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="@color/colorPurple"
         android:layout_margin="8dp"/>
 
     <TextView
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="@color/colorPurple"
         android:layout_margin="8dp"/>
 
 </LinearLayout>
