@@ -33,6 +33,7 @@ public class AgentAdapter extends ArrayAdapter<SalesAgent> {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 
+        //change background colours
         listItemView.setBackgroundColor(getContext().getResources().getColor(R.color.colorSkyBlue));
 
         currentAgent = getItem(position);
