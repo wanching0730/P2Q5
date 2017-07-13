@@ -24,11 +24,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final ArrayList<SalesAgent> arrayList = new ArrayList<SalesAgent>();
-        arrayList.add(new SalesAgent("wan ching", "www.youtube.com", "tel:0164558863"));
-        arrayList.add((new SalesAgent("wan fang", "www.youtube.com", "tel:0164558878")));
-        arrayList.add((new SalesAgent("wan theng", "www.youtube.com", "tel:0164559999")));
-        arrayList.add((new SalesAgent("jason", "www.youtube.com", "tel:0161234567")));
-        arrayList.add((new SalesAgent("john", "www.youtube.com", "tel:0168888888")));
+        arrayList.add(new SalesAgent("wan ching", "http://www.hkdrama.com", "tel:0164558863"));
+        arrayList.add((new SalesAgent("wan fang", "http://www.google.com", "tel:0164558878")));
+        arrayList.add((new SalesAgent("wan theng", "http://www.youtube.com", "tel:0164559999")));
+        arrayList.add((new SalesAgent("jason", "http://www.utar.com", "tel:0161234567")));
+        arrayList.add((new SalesAgent("john", "http://www.github.com", "tel:0168888888")));
 
         listView = (ListView) findViewById(R.id.list_view);
         adapter = new AgentAdapter(this, arrayList);
@@ -38,9 +38,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 final SalesAgent agent = arrayList.get(position);
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse(agent.getPhone()));
-                startActivity(intent);
 
                 Toast.makeText(MainActivity.this, agent.getName() + " is selected", Toast.LENGTH_SHORT).show();
             }

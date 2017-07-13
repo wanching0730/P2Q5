@@ -42,15 +42,24 @@ public class AgentAdapter extends ArrayAdapter<SalesAgent> {
 
         name_field.setText(currentAgent.getName());
         website_field.setText(currentAgent.getWebsite());
+        website_field.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(currentAgent.getWebsite()));
+                getContext().startActivity(intent);
+            }
+        });
+
         phone_field.setText(currentAgent.getPhone());
-//        phone_field.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        Intent intent = new Intent(Intent.ACTION_DIAL);
-//                        intent.setData(Uri.parse(currentAgent.getPhone()));
-//                        getContext().startActivity(intent);
-//                    }
-//                });
+        phone_field.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Intent.ACTION_DIAL);
+                        intent.setData(Uri.parse(currentAgent.getPhone()));
+                        getContext().startActivity(intent);
+                    }
+                });
 
         return listItemView;
     }
