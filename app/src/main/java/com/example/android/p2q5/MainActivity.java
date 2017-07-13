@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,23 +38,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 final SalesAgent agent = arrayList.get(position);
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse(agent.getPhone()));
+                startActivity(intent);
 
-                TextView phone_field = (TextView)view.findViewById(R.id.phone);
-                phone_field.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(Intent.ACTION_DIAL);
-                        intent.setData(Uri.parse(agent.getPhone()));
-                        startActivity(intent);
-                    }
-                });
+                Toast.makeText(MainActivity.this, agent.getName() + " is selected", Toast.LENGTH_SHORT).show();
             }
         });
-
-
-
-
-
 
 
     }

@@ -19,8 +19,6 @@ import java.util.ArrayList;
 
 public class AgentAdapter extends ArrayAdapter<SalesAgent> {
 
-    private SalesAgent currentAgent;
-
     public AgentAdapter(Activity context, ArrayList<SalesAgent> agents){
         super(context, 0, agents);
     }
@@ -36,15 +34,23 @@ public class AgentAdapter extends ArrayAdapter<SalesAgent> {
         //change background colours
         listItemView.setBackgroundColor(getContext().getResources().getColor(R.color.colorSkyBlue));
 
-        currentAgent = getItem(position);
+        final SalesAgent currentAgent = getItem(position);
 
         TextView name_field = (TextView) listItemView.findViewById(R.id.name);
         TextView website_field = (TextView) listItemView.findViewById(R.id.website);
-        final TextView phone_field = (TextView) listItemView.findViewById(R.id.phone);
+        TextView phone_field = (TextView) listItemView.findViewById(R.id.phone);
 
         name_field.setText(currentAgent.getName());
         website_field.setText(currentAgent.getWebsite());
         phone_field.setText(currentAgent.getPhone());
+//        phone_field.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Intent intent = new Intent(Intent.ACTION_DIAL);
+//                        intent.setData(Uri.parse(currentAgent.getPhone()));
+//                        getContext().startActivity(intent);
+//                    }
+//                });
 
         return listItemView;
     }
